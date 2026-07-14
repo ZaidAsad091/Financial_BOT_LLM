@@ -14,7 +14,7 @@ An AI-powered financial assistant that uses Retrieval-Augmented Generation (RAG)
 ## Technologies
 - Python
 - OpenAI API
-- ChromaDB (or your vector database)
-- LangChain (if used)
+- ChromaDB (vector database)
+- LangChain (RAG Pipeline)
 - python-dotenv
 
