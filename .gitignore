@@ -3,3 +3,9 @@
 
 # Environment variables
 .env
+__pycache__/
+*.pyc
+.DS_Store
+
+#Vector database
+rag_vectorestore/

@@ -20,6 +20,7 @@ from urllib.request import urlopen, Request
 from pathlib import Path
 import gradio as gr
 from openai import OpenAI
+from dotenv import load_dotenv
 
 
 
@@ -29,7 +30,7 @@ from openai import OpenAI
 # ============================================================================
 
 persist_directory = "./rag_vectorestore"
-
+load_dotenv()  # Load environment variables from .env file
 print("\n Creating Embedding model\n")
 
 embeddings= OpenAIEmbeddings(model=os.getenv("OPENAI_EMBEDDING_MODEL"))  # Create embeddings model
