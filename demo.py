@@ -130,11 +130,12 @@ else:
 
 chat_history = []
 chat_prompt = ChatPromptTemplate.from_messages([
-    "system", """YYou are Financial assistant AI. Answer using the document context below and the chat history.
+    "system", """You are Financial assistant AI. Answer using the document context below and the chat history.
     Use chat history to resolve references like "that issue" or "that stock".
-    For factual claims, prioritize the retrieved context.
+    For factual claims, prioritize the retrieved context. 
+    Retrieved context: {context}
     If information is not available in context or history, say "I don't have that information."
-    Always cite sources when available.""",
+    Always cite sources.""",
     MessagesPlaceholder(variable_name="history"),
     "human", "{question}"])    
 
